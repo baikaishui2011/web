@@ -694,9 +694,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 			$.ajax({
 				type : "POST",
 				headers: {
-				      "Access-Control-Allow-Origin": "*",
-				      "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
-				      "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+				      "Access-Control-Allow-Origin": "*"
 				    },
 				url : 'https://ai-flux.xiaoquan2011st-41e.workers.dev/v1/chat/completions', 
 				data : {prompt : prompt},
