@@ -169,8 +169,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 				<!-- <img id="drawImg" src="data:image/png;base64,"> -->
 				<img id="drawImg" src="1.png">
 			</div>
-			<textarea id="message-input" class="w-full overflow-y resize-none border-none outline-none bg-slate-300/25 rounded-lg p-2 sm:bg-transparent sm:p-1" placeholder="Type your prompt here..." style="min-height: 56px; max-height: 288px; color: rgba(0, 0, 0, 0.87); font-family: Roboto, Helvetica, Arial, sans-serif; font-size: 0.857143rem; overflow: hidden; overflow-wrap: break-word; text-align: start; height: 56px;" autofocus=""></textarea>
-			<button id="sendBtn" style="color:white;background-color: darkmagenta;">send</button>
+	
 		</div>
 				</div>
 				</div>
@@ -681,34 +680,5 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 </script>
 <script src="js/frontend.min_1.js" id="elementor-frontend-js"></script>
 <script src="js/elements-handlers.min.js" id="pro-elements-handlers-js"></script>
-<script>
-	// const copyBtn = document.getElementById('copyURL');
-	$(document).ready(function(){
-		$("#sendBtn").click(function(){
-			var prompt = $("#message-input").val();
-			if(prompt === ''){
-				return
-			}
 
-
-			$.ajax({
-				type : "POST",
-				url : 'https://api.cloudflare.com/client/v4/accounts/41ec26b18c882e23af9a055104b02787/ai/run/@cf/black-forest-labs/flux-1-schnell', 
-				data : {prompt : prompt},
-				dataType: "json",
-				contentType : "application/json",
-				crossDomain: true,
-				success : function(data){
-						var data = JSON.parse(data)
-						console.log(data);
-						$("#drawImg").attr("src","data:image/png;base64,"+data.result.image);
-					}
-				})
-
-			
-		});
-
-
-	})
-</script>
 </body></html>
