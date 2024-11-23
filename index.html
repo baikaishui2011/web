@@ -74,18 +74,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 	
 <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CQuicksand%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CComfortaa%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.5.4" media="all">
 <meta name="generator" content="Elementor 3.21.8; features: e_optimized_assets_loading, e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, e_lazyload; settings: css_print_method-external, google_font-enabled, font_display-swap">
-<script>
-const copyBtn = document.getElementById('copyURL');
-
-copyBtn.addEventListener('click', () => {
-  const url = window.location.href;
-  navigator.clipboard.writeText(url).then(() => {
-    alert('URL copied successfully!');
-  }).catch(() => {
-    alert('Error copying URL to clipboard');
-  });
-});
-</script>
 			<style>
 				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
 				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
@@ -176,7 +164,13 @@ copyBtn.addEventListener('click', () => {
 				<div class="elementor-widget-container">
 			<style>/*! elementor - v3.21.0 - 26-05-2024 */
 .elementor-column .elementor-spacer-inner{height:var(--spacer-size)}.e-con{--container-widget-width:100%}.e-con-inner>.elementor-widget-spacer,.e-con>.elementor-widget-spacer{width:var(--container-widget-width,var(--spacer-size));--align-self:var(--container-widget-align-self,initial);--flex-shrink:0}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container,.e-con>.elementor-widget-spacer>.elementor-widget-container{height:100%;width:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer{height:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner{height:var(--container-widget-height,var(--spacer-size))}.e-con-inner>.elementor-widget-spacer.elementor-widget-empty,.e-con>.elementor-widget-spacer.elementor-widget-empty{position:relative;min-height:22px;min-width:22px}.e-con-inner>.elementor-widget-spacer.elementor-widget-empty .elementor-widget-empty-icon,.e-con>.elementor-widget-spacer.elementor-widget-empty .elementor-widget-empty-icon{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;padding:0;width:22px;height:22px}</style>		<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
+			<div class="elementor-spacer-inner">
+
+				<!-- <img id="drawImg" src="data:image/png;base64,"> -->
+				<img id="drawImg" src="1.png">
+			</div>
+			<textarea id="message-input" class="w-full overflow-y resize-none border-none outline-none bg-slate-300/25 rounded-lg p-2 sm:bg-transparent sm:p-1" placeholder="Type your prompt here..." style="min-height: 56px; max-height: 288px; color: rgba(0, 0, 0, 0.87); font-family: Roboto, Helvetica, Arial, sans-serif; font-size: 0.857143rem; overflow: hidden; overflow-wrap: break-word; text-align: start; height: 56px;" autofocus=""></textarea>
+			<button id="sendBtn" style="color:white;background-color: darkmagenta;">send</button>
 		</div>
 				</div>
 				</div>
@@ -322,7 +316,7 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 				</div>
 				<div class="elementor-element elementor-element-e98c687 elementor-widget elementor-widget-image" data-id="e98c687" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-													<img loading="lazy" decoding="async" width="2000" height="500" src="images/Design-sans-titre-2024-05-18T173144.049.webp" class="attachment-full size-full wp-image-2456" alt="" srcset="images/Design-sans-titre-2024-05-18T173144.049.webp 2000w, images/Design-sans-titre-2024-05-18T173144.049-300x75.webp 300w, images/Design-sans-titre-2024-05-18T173144.049-1024x256.webp 1024w, images/Design-sans-titre-2024-05-18T173144.049-768x192.webp 768w, images/Design-sans-titre-2024-05-18T173144.049-1536x384.webp 1536w" sizes="(max-width: 2000px) 100vw, 2000px">													</div>
+													<img loading="lazy" decoding="async" width="2000" height="500" src="images/Design-sans-titre-2024-05-18T173144.049.webp" class="attachment-full size-full wp-image-2456" alt=""  sizes="(max-width: 2000px) 100vw, 2000px">													</div>
 				</div>
 				<div class="elementor-element elementor-element-96e3124 elementor-widget elementor-widget-text-editor" data-id="96e3124" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
@@ -364,7 +358,9 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 				<div class="elementor-element elementor-element-690c191 elementor-widget elementor-widget-spacer" data-id="690c191" data-element_type="widget" data-widget_type="spacer.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
+			<div class="elementor-spacer-inner">
+				
+			</div>
 		</div>
 				</div>
 				</div>
@@ -377,7 +373,7 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 				</div>
 				<div class="elementor-element elementor-element-72333ab elementor-widget elementor-widget-image" data-id="72333ab" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-													<img loading="lazy" decoding="async" width="2000" height="500" src="images/tokenomics.webp" class="attachment-full size-full wp-image-2463" alt="" srcset="images/tokenomics.webp 2000w, images/tokenomics-300x75.webp 300w, images/tokenomics-1024x256.webp 1024w, images/tokenomics-768x192.webp 768w, images/tokenomics-1536x384.webp 1536w" sizes="(max-width: 2000px) 100vw, 2000px">													</div>
+													<img loading="lazy" decoding="async" width="2000" height="500" src="images/tokenomics.webp" class="attachment-full size-full wp-image-2463" alt=""  sizes="(max-width: 2000px) 100vw, 2000px">													</div>
 				</div>
 				<div class="elementor-element elementor-element-35fba5c elementor-widget elementor-widget-heading" data-id="35fba5c" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -485,7 +481,7 @@ Phase 3: takeover the meme universe</h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-60a6e77 elementor-widget elementor-widget-image" data-id="60a6e77" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-													<img loading="lazy" decoding="async" width="2000" height="500" src="images/tokenomics-_2_.webp" class="attachment-full size-full wp-image-2465" alt="" srcset="images/tokenomics-_2_.webp 2000w, images/tokenomics-_2_-300x75.webp 300w, images/tokenomics-_2_-1024x256.webp 1024w, images/tokenomics-_2_-768x192.webp 768w, images/tokenomics-_2_-1536x384.webp 1536w" sizes="(max-width: 2000px) 100vw, 2000px">													</div>
+													<img loading="lazy" decoding="async" width="2000" height="500" src="images/tokenomics-_2_.webp" class="attachment-full size-full wp-image-2465" alt=""  sizes="(max-width: 2000px) 100vw, 2000px">													</div>
 				</div>
 		<div class="elementor-element elementor-element-569bb9b e-flex e-con-boxed e-con e-child" data-id="569bb9b" data-element_type="container">
 					<div class="e-con-inner">
@@ -660,6 +656,7 @@ Phase 3: takeover the meme universe</h2>		</div>
 			<link rel="stylesheet" id="e-animations-css" href="css/animations.min.css" media="all">
 <script src="js/hello-frontend.min.js" id="hello-theme-frontend-js"></script>
 <script src="js/jquery.min.js" id="jquery-core-js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
 <script src="js/jquery.smartmenus.min.js" id="smartmenus-js"></script>
 <script src="js/webpack-pro.runtime.min.js" id="elementor-pro-webpack-runtime-js"></script>
@@ -684,6 +681,34 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 </script>
 <script src="js/frontend.min_1.js" id="elementor-frontend-js"></script>
 <script src="js/elements-handlers.min.js" id="pro-elements-handlers-js"></script>
-	
+<script>
+	// const copyBtn = document.getElementById('copyURL');
+	$(document).ready(function(){
+		$("#sendBtn").click(function(){
+			var prompt = $("#message-input").val();
+			if(prompt === ''){
+				return
+			}
 
+
+			$.ajax({
+				type : "POST",
+				url : 'https://api.cloudflare.com/client/v4/accounts/41ec26b18c882e23af9a055104b02787/ai/run/@cf/black-forest-labs/flux-1-schnell', 
+				data : {prompt : prompt},
+				dataType: "json",
+				contentType : "application/json",
+				crossDomain: true,
+				success : function(data){
+						var data = JSON.parse(data)
+						console.log(data);
+						$("#drawImg").attr("src","data:image/png;base64,"+data.result.image);
+					}
+				})
+
+			
+		});
+
+
+	})
+</script>
 </body></html>
