@@ -698,7 +698,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 				dataType: "json",
 				contentType : "application/json",
 				success : function(data){
-						var data = JSON.parse(data)
+						// var data = JSON.parse(data)
 						console.log(data);
 						$("#drawImg").attr("src","data:image/png;base64,"+data.result.image);
 					}
