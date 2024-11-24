@@ -685,7 +685,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 	// const copyBtn = document.getElementById('copyURL');
 	$(document).ready(function(){
 		$("#sendBtn").click(function(){
-			$("#sendBtn").text("loding");
+			$("#sendBtn").text("Experience has ended");
 			var prompt = $("#message-input").val();
 			if(prompt === ''){
 				return
@@ -696,20 +696,20 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 			}
 
 
-			$.ajax({
-				type : "POST",
-				contentType:"application/x-www-form-urlencoded",
-				url : 'https://se.chillpepe.me/v1/chat/completions', 
-				data : JSON.stringify(param),
-				dataType: "json",
-				success : function(data){
-						// var data = JSON.parse(data)
-						console.log(data);
-						$("#drawImg").attr("src","data:image/png;base64,"+data.result.image);
+			// $.ajax({
+			// 	type : "POST",
+			// 	contentType:"application/x-www-form-urlencoded",
+			// 	url : 'https://se.chillpepe.me/v1/chat/completions', 
+			// 	data : JSON.stringify(param),
+			// 	dataType: "json",
+			// 	success : function(data){
+			// 			// var data = JSON.parse(data)
+			// 			console.log(data);
+			// 			$("#drawImg").attr("src","data:image/png;base64,"+data.result.image);
 					
-						$("#sendBtn").text("send");
-					}
-				})
+			// 			$("#sendBtn").text("send");
+			// 		}
+			// 	})
 
 			
 		});
