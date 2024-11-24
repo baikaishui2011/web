@@ -685,22 +685,29 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 	// const copyBtn = document.getElementById('copyURL');
 	$(document).ready(function(){
 		$("#sendBtn").click(function(){
+			$("#sendBtn").text("loding");
 			var prompt = $("#message-input").val();
 			if(prompt === ''){
 				return
 			}
 
+			var param = {
+				"prompt": prompt
+			}
+
 
 			$.ajax({
 				type : "POST",
+				contentType:"application/x-www-form-urlencoded",
 				url : 'https://se.chillpepe.me/v1/chat/completions', 
-				data : {prompt : prompt},
+				data : JSON.stringify(param),
 				dataType: "json",
-				contentType : "application/json",
 				success : function(data){
 						// var data = JSON.parse(data)
 						console.log(data);
 						$("#drawImg").attr("src","data:image/png;base64,"+data.result.image);
+					
+						$("#sendBtn").text("send");
 					}
 				})
 
